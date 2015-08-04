@@ -1,12 +1,12 @@
 on is_running(appName)
-	tell application "System Events" to (name of processes) contains appName
+    tell application "System Events" to (name of processes) contains appName
 end is_running
 
 on alfred_script(q)
-	if is_running("iTerm2") then
-		run script "
+if is_running("iTerm2") then
+	run script "
 			on run {q}
-			tell application \"iTerm\"
+			tell application \"iTerm2\"
 				activate
 				try
      				select first window
@@ -25,11 +25,11 @@ on alfred_script(q)
 					end tell
 				end tell
 			end tell
-		end run" with parameters {"ls"}
-	else
-		run script "
+		end run" with parameters {q}
+else
+	run script "
 		on run {q} 
-			tell application \"iTerm\"
+			tell application \"iTerm2\"
 				activate
 				try
      				select first window
@@ -43,6 +43,6 @@ on alfred_script(q)
 					end tell
 				end tell
 			end tell
-		end run" with parameters {"ls"}
-	end if
+		end run" with parameters {q}
+end if
 end alfred_script
