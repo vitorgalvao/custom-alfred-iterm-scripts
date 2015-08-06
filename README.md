@@ -5,6 +5,10 @@ This repository contains custom Applescripts that can be put into the Alfred -->
 
 Custom iTerm Applescripts for using iTerm in Alfred. 
 
+## Specific Version Notes
+
+If you have iTerm in a location other than /Applications/iTerm.app make sure you update the Applescript templates to match that (see inline comments).
+
 ## Contributing
 
 1. Fork it!
