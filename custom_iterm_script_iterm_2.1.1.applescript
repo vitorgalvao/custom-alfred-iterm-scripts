@@ -23,7 +23,7 @@ on alfred_script(q)
 		end run" with parameters {q}
 	else
 		run script "
-			on run {q} 
+			on run {q}
 				tell application \":Applications:iTerm.app\"
 					activate
 					tell the first terminal
