@@ -7,7 +7,7 @@ end is_running
 -- this gets around issues with AppleScript not handling things well if you have two iTerm binaries on your system... which can happen :D
 
 on alfred_script(q)
-	if is_running("iTerm") then
+	if is_running("iTerm2") or is_running("iTerm") then
 		run script "
 			on run {q}
 			tell application \":Applications:iTerm.app\"
