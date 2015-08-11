@@ -29,7 +29,7 @@ on alfred_script(q)
 					end tell
 				end tell
 			end tell
-		end run" with parameters {"q"}
+		end run" with parameters {q}
 	else
 		run script "
 		on run {q}
