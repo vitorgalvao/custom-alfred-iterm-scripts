@@ -1,3 +1,7 @@
+-- This is v0.5 of the custom script for AlfredApp for iTerm 2.9+
+-- Please see https://github.com/stuartcryan/custom-iterm-applescripts-for-alfred/
+-- for the latest changes.
+
 on is_running(app_name)
 	tell application "System Events" to (name of processes) contains app_name
 end is_running
