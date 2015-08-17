@@ -5,9 +5,19 @@ This repository contains custom Applescripts that can be put into the Alfred -->
 
 Custom iTerm Applescripts for using iTerm in Alfred. 
 
+## How to install the scripts
+Check out the official YouTube video, it will give you a quick two and a half minute rundown.
+[![ScreenShot](http://akamai.technicalnotebook.com/alfred-workflow-images/custom-iterm-applescripts/integrate_iterm_alfredapp_custom_terminal_script.png)](https://www.youtube.com/watch?v=_XlJFCbmVUs)
+
 ## Specific Version Notes
 
 If you have iTerm in a location other than /Applications/iTerm.app make sure you update the Applescript templates to match that (see inline comments).
+
+## Donations
+If you would like to say thanks and donate which will give me ever more life giving caffeine Diet Coke, some Cake, or to put towards a shiny new gadget you can [donate to me via Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JM6E65M2GLXHE). 
+
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JM6E65M2GLXHE" target="_blank"><img src="https://www.paypalobjects.com/en_AU/i/btn/btn_donateCC_LG.gif" border="0" alt="PayPal — The safer, easier way to pay online."></a>
+
 
 ## Contributing
 
