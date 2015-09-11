@@ -16,7 +16,12 @@ on alfred_script(q)
 			on run {q}
 				tell application \":Applications:iTerm.app\"
 					activate
-					tell the first terminal
+					try
+						set myterm to the first terminal
+					on error
+						set myterm to (make new terminal)
+					end try
+					tell myterm
 						set mysession to (launch session \"Default Session\")
 						tell mysession to write text q
 					end tell
