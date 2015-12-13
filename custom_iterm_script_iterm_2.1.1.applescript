@@ -1,4 +1,4 @@
--- This is v0.3 of the custom script for AlfredApp for iTerm 2.1.1
+-- This is v0.4 of the custom script for AlfredApp for iTerm 2.1.1
 -- Please see https://github.com/stuartcryan/custom-iterm-applescripts-for-alfred/
 -- for the latest changes.
 
