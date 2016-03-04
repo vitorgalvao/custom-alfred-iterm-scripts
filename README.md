@@ -5,6 +5,8 @@ This repository contains custom Applescripts that can be put into the Alfred -->
 
 Custom iTerm Applescripts for using iTerm in Alfred. 
 
+### Note: the version 3 beta of iTerm is actually known as 2.9 and the 2.9 version of the iterm-alfred integration script is all ready to roll and will work for those of you using the iTerm version 3 beta (a.k.a. iTerm 2.9.something)
+
 ## How to install the scripts
 ### Video version
 Check out the official YouTube video, it will give you a quick two and a half minute rundown.
