@@ -1,4 +1,4 @@
--- This is v0.6 of the custom script for AlfredApp for iTerm 2.9+
+-- This is v0.7 of the custom script for AlfredApp for iTerm 3.1.1+
 -- created by Sinan Eldem www.sinaneldem.com.tr
 
 on alfred_script(q)
