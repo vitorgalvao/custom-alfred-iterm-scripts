@@ -1,31 +1,35 @@
 # custom-iterm-applescripts-for-alfred
-Unfortunately as many people will know, when iTerm's Applescript functionality changes it can often break integration with Alfred
-
 This repository contains custom Applescripts that can be put into the Alfred --> Features --> Terminal --> Custom section to enable the correct operation of iTerm with Alfred.
 
-Custom iTerm Applescripts for using iTerm in Alfred. 
+Unfortunately as many people will know, when iTerm's Applescript functionality changes it can often break integration with Alfred.
 
-### Note: the version 3 beta of iTerm is actually known as 2.9 and the 2.9 version of the iterm-alfred integration script is all ready to roll and will work for those of you using the iTerm version 3 beta (a.k.a. iTerm 2.9.something)
+### Note: Check your iTerm version (`iTerm2` → `About iTerm2`) and follow the instructions corresponding to your version below.
 
 ## How to install the scripts
-### Video version
+### Video instructions
 Check out the official YouTube video, it will give you a quick two and a half minute rundown.
 [![ScreenShot](http://akamai.technicalnotebook.com/alfred-workflow-images/custom-iterm-applescripts/integrate_iterm_alfredapp_custom_terminal_script.png)](https://www.youtube.com/watch?v=_XlJFCbmVUs)
 
-### Text version
+### Text instructions
 
-1. Copy the script for the iTerm2 version you have.
+1. Run one of these terminal commands to copy the Applescript for your iTerm2 version to your clipboard.
   
-  + For `2.1.1`:
+  + For `3.1.1`:
 
   ```bash
-  curl --silent 'https://raw.githubusercontent.com/stuartcryan/custom-iterm-applescripts-for-alfred/master/custom_iterm_script_iterm_2.1.1.applescript' | pbcopy
+  curl --silent 'https://raw.githubusercontent.com/stuartcryan/custom-iterm-applescripts-for-alfred/master/custom_iterm_script_iterm_3.1.1.applescript' | pbcopy
   ```
 
   + For `2.9`:
 
   ```bash
   curl --silent 'https://raw.githubusercontent.com/stuartcryan/custom-iterm-applescripts-for-alfred/master/custom_iterm_script_iterm_2.9.applescript' | pbcopy
+  ```
+
+  + For `2.1.1`:
+
+  ```bash
+  curl --silent 'https://raw.githubusercontent.com/stuartcryan/custom-iterm-applescripts-for-alfred/master/custom_iterm_script_iterm_2.1.1.applescript' | pbcopy
   ```
 
 2. Paste it under `Alfred Preferences` → `Features` → `Terminal / Shell` → `Application` → `Custom`.
