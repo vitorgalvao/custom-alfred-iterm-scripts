@@ -13,8 +13,8 @@ Check out the official YouTube video, it will give you a quick two and a half mi
 ### Text instructions
 
 1. Run one of these terminal commands to copy the Applescript for your iTerm2 version to your clipboard.
-  
-  + For `3.1.1`:
+
+  + For `3.1.1` and newer:
 
   ```bash
   curl --silent 'https://raw.githubusercontent.com/stuartcryan/custom-iterm-applescripts-for-alfred/master/custom_iterm_script_iterm_3.1.1.applescript' | pbcopy
@@ -41,7 +41,7 @@ Check out the official YouTube video, it will give you a quick two and a half mi
 If you have iTerm in a location other than /Applications/iTerm.app make sure you update the Applescript templates to match that (see inline comments).
 
 ## Donations
-If you would like to say thanks and donate which will give me ever more life giving caffeine Diet Coke, some Cake, or to put towards a shiny new gadget you can [donate to me via Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JM6E65M2GLXHE). 
+If you would like to say thanks and donate which will give me ever more life giving caffeine Diet Coke, some Cake, or to put towards a shiny new gadget you can [donate to me via Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JM6E65M2GLXHE).
 
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JM6E65M2GLXHE" target="_blank"><img src="https://www.paypalobjects.com/en_AU/i/btn/btn_donateCC_LG.gif" border="0" alt="PayPal — The safer, easier way to pay online."></a>
 
