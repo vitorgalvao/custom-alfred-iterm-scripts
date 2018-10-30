@@ -12,18 +12,9 @@ on alfred_script(q)
 			on run {q}
 				tell application \":Applications:iTerm.app\"
 					activate
-					try
-						select first window
-						set onlywindow to true
-					on error
-						create window with default profile
-						select first window
-						set onlywindow to true
-					end try
+					create window with default profile
+					select first window
 					tell the first window
-						if onlywindow is false then
-							create tab with default profile
-						end if
 						tell current session to write text q
 					end tell
 				end tell
