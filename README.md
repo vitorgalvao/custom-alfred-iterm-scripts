@@ -35,7 +35,7 @@ Check out the official YouTube video, it will give you a quick two and a half mi
 
     The top three will  do things is the current tab , but if  you don't  want your job which is  in currernt tab  to be interrupted , just try this one . 
 
-    Just copy the content of 【[new_tab_custom_iterm_script_iterm_3.1.1.applescript]()】
+    Just copy the content of 【[new_tab_custom_iterm_script_iterm_3.1.1.applescript](https://github.com/hmfight/custom-iterm-applescripts-for-alfred/blob/master/new_tab_custom_iterm_script_iterm_3.1.1.applescript)】
 
 2. Paste it under `Alfred Preferences` → `Features` → `Terminal / Shell` → `Application` → `Custom`.
 
