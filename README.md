@@ -13,7 +13,7 @@ Check out the official YouTube video, it will give you a quick two and a half mi
 ### Text instructions
 
 1. Run one of these terminal commands to copy the Applescript for your iTerm2 version to your clipboard.
-  
+
   + For `3.1.1`:
 
   ```bash
@@ -31,6 +31,11 @@ Check out the official YouTube video, it will give you a quick two and a half mi
   ```bash
   curl --silent 'https://raw.githubusercontent.com/stuartcryan/custom-iterm-applescripts-for-alfred/master/custom_iterm_script_iterm_2.1.1.applescript' | pbcopy
   ```
+  + For `>3.1.1`  And  If  you pefer a new tab to run the commands:
+
+    The top three will  do things is the current tab , but if  you don't  want your job which is  in currernt tab  to be interrupted , just try this one . 
+
+    Just copy the content of 【[new_tab_custom_iterm_script_iterm_3.1.1.applescript]()】
 
 2. Paste it under `Alfred Preferences` → `Features` → `Terminal / Shell` → `Application` → `Custom`.
 
