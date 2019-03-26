@@ -9,7 +9,7 @@ on alfred_script(q)
 					activate
 					try
 						select first window
-						set onlywindow to true
+						set onlywindow to false
 					on error
 						create window with default profile
 						select first window
