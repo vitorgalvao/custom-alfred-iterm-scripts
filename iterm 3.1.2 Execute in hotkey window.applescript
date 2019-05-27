@@ -1,5 +1,5 @@
 on alfred_script(q)
-  tell application "iTerm-adhoc"
+  tell application "iTerm2"
 	repeat with newWindow in (every window where is hotkey window is true)
 		tell newWindow
 			reveal hotkey window
