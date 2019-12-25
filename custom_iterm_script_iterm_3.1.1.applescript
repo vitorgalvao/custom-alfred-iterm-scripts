@@ -9,14 +9,14 @@ on alfred_script(q)
 					activate
 					try
 						select first window
-						set onlywindow to true
+						set nowindows to false
 					on error
 						create window with default profile
 						select first window
-						set onlywindow to true
+						set nowindows to true
 					end try
 					tell the first window
-						if onlywindow is false then
+						if nowindows is false then
 							create tab with default profile
 						end if
 						tell current session to write text q
