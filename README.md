@@ -11,6 +11,12 @@ AppleScript for [iTerm2](https://iterm2.com/) [Alfred](https://www.alfredapp.com
 4. Select the text in the box.
 4. Paste.
 
+## Optional property settings:
+
+1. Set `open_in_new_window` to `true` to always open command in new window.
+1. Set `new_session_on_startup` to `true` to always open a new session/tab if Alfred starts the app.
+1. Set `always_activate` to `false` if you don't want to raise and switch keyboard focus to show output.
+
 ### Copy the script
 
 To copy the script to your clipboard, run the following command.
