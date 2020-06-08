@@ -1,4 +1,4 @@
--- change this property to true to always use a new window
+-- Change this property to true to always use a new window
 property open_in_new_window : false
 
 on alfred_script(q)
@@ -14,9 +14,9 @@ on alfred_script(q)
 				end try
 			end if
 		end if
-		
+
 		delay 0.1 -- If we do not wait, the command may fail to send
-		
+
 		tell the first window to tell current session to write text q
 		activate
 	end tell
