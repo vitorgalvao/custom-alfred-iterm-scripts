@@ -8,8 +8,9 @@ AppleScript for [iTerm2](https://iterm2.com/) [Alfred](https://www.alfredapp.com
 2. Open Alfred Preferences (call Alfred and press <kbd>⌘</kbd><kbd>,</kbd>).
 3. Navigate to Features → Terminal → Custom.
 4. Set `Application` to `Custom`.
-4. Select the text in the box.
-4. Paste.
+5. Select the text in the box.
+6. Paste.
+7. Optionally, change the script’s behaviour by changing the `property` lines at the top.
 
 ### Copy the script
 
