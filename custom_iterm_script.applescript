@@ -25,11 +25,6 @@ on has_windows()
 end has_windows
 
 on send_text(custom_text)
-	-- iTerm may try to write text before a window exists, so wait for it
-	repeat until has_windows()
-		delay 0.1
-	end repeat
-	
 	tell application "iTerm" to tell the first window to tell current session to write text custom_text
 end send_text
 
@@ -42,13 +37,20 @@ on alfred_script(query)
 			new_tab()
 		end if
 	else
+		-- If iTerm is not running and we tell it to create a new window, we get two
+		-- One from opening the application, and the other from the command
 		if is_running() then
 			new_window()
 		else
 			call_forward()
 		end if
 	end if
-	
+
+	-- Make sure a window exists before we continue, or the write may fail
+	repeat until has_windows()
+		delay 0.01
+	end repeat
+
 	send_text(query)
 	call_forward()
 end alfred_script
