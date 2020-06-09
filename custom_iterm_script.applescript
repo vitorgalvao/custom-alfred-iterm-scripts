@@ -10,6 +10,28 @@ on new_tab()
 	tell application "iTerm" to tell the first window to create tab with default profile
 end new_tab
 
+on close()
+	tell application "iTerm"
+		set isBusy to true
+		repeat until isBusy is false
+			tell current session of first window
+				if (is processing) then
+					set isBusy to true
+				else
+					set isBusy to false
+				end if
+			end tell
+			delay 1
+		end repeat
+		
+		if open_in_new_window then
+			tell application "iTerm" to tell first window to close
+		else
+			tell application "iTerm" to tell current tab of first window to close
+		end if
+	end tell
+end close
+
 on call_forward()
 	tell application "iTerm" to activate
 end call_forward
@@ -53,4 +75,5 @@ on alfred_script(query)
 
 	send_text(query)
 	call_forward()
+	close()
 end alfred_script
