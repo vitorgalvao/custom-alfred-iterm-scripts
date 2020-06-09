@@ -25,7 +25,7 @@ on close()
 		end repeat
 		
 		if open_in_new_window then
-			tell application "iTerm" to tell first window to close
+			tell current session of first window to close
 		else
 			tell application "iTerm" to tell current tab of first window to close
 		end if
