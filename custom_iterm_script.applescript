@@ -1,5 +1,5 @@
--- Please see https://github.com/vitorgalvao/custom-alfred-iterm-scripts
--- for the latest changes.
+-- For the latest version:
+-- https://github.com/vitorgalvao/custom-alfred-iterm-scripts
 
 -- Set this property to true to always open in a new window
 property open_in_new_window : false
