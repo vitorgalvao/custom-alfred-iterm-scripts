@@ -20,10 +20,6 @@ To copy the script to your clipboard, run the following command.
 curl --silent 'https://raw.githubusercontent.com/vitorgalvao/custom-alfred-iterm-scripts/master/custom_iterm_script.applescript' | pbcopy
 ```
 
-#### Credits
-
-Script written and maintained by [Vítor Galvão](https://github.com/vitorgalvao/). Previous versions by [Stuart Ryan](http://stuartryan.com).
-
 #### License
 
 The Unlicense (Public Domain, essentially)
