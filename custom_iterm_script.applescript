@@ -46,6 +46,8 @@ on alfred_script(query)
 			new_window()
 		else
 			call_forward()
+			delay 0.01
+			new_window()
 		end if
 	end if
 
