@@ -4,6 +4,9 @@
 -- Set this property to true to always open in a new window
 property open_in_new_window : false
 
+-- Set this property to false to reuse current tab
+property open_in_new_tab : true
+
 -- Handlers
 on new_window()
 	tell application "iTerm" to create window with default profile
@@ -36,8 +39,10 @@ on alfred_script(query)
 	if has_windows() then
 		if open_in_new_window then
 			new_window()
-		else
+		else if open_in_new_tab then
 			new_tab()
+		else
+			-- Reuse current tab
 		end if
 	else
 		-- If iTerm is not running and we tell it to create a new window, we get two
