@@ -4,6 +4,10 @@
 -- Set this property to true to always open in a new window
 property open_in_new_window : false
 
+-- Set this property to false to enter the command in the current tab
+-- This has no effect if the property open_in_new_window is true
+property open_in_new_tab : true
+
 -- Handlers
 on new_window()
 	tell application "iTerm" to create window with default profile
@@ -37,7 +41,11 @@ on alfred_script(query)
 		if open_in_new_window then
 			new_window()
 		else
-			new_tab()
+			if open_in_new_tab then
+				new_tab()
+			else
+				call_forward()
+			end if
 		end if
 	else
 		-- If iTerm is not running and we tell it to create a new window, we get two
