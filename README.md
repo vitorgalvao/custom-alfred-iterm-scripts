@@ -4,7 +4,7 @@ AppleScript for [iTerm2](https://iterm2.com/) [Alfred](https://www.alfredapp.com
 
 ## Use
 
-1. [Copy the script to your clipboard](#copy-the-script).
+1. [Copy the script to your clipboard](./custom_iterm_script.applescript).
 2. Open Alfred Preferences (call Alfred and press <kbd>⌘</kbd><kbd>,</kbd>).
 3. Navigate to Features → Terminal → Custom.
 4. Set `Application` to `Custom`.
