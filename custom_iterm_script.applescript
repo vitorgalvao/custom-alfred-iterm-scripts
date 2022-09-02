@@ -7,6 +7,9 @@ property open_in_new_window : false
 -- Set this property to false to reuse current tab
 property open_in_new_tab : true
 
+-- Set this property to true if iTerm is configured to launch without opening a new window
+property iterm_opens_quietly : false
+
 -- Handlers
 on new_window()
   tell application "iTerm" to create window with default profile
@@ -54,9 +57,9 @@ on alfred_script(query)
       -- Reuse current tab
     end if
   else
-    -- If iTerm is not running and we tell it to create a new window, we get two
-    -- One from opening the application, and the other from the command
-    if is_running() then
+    -- If iTerm is not running and we tell it to create a new window, we get two:
+    -- one from opening the application, and the other from the command
+    if is_running() or iterm_opens_quietly then
       new_window()
     else
       call_forward()
@@ -64,10 +67,15 @@ on alfred_script(query)
   end if
 
   -- Make sure a window exists before we continue, or the write may fail
-  repeat until has_windows()
+  -- "with timeout" does not work with a "repeat"
+  -- Delay of 0.01 seconds repeated 500 times means a timeout of 5 seconds
+  repeat 500 times
+    if has_windows() then
+      send_text(query)
+      call_forward()
+      exit repeat
+    end if
+
     delay 0.01
   end repeat
-
-  send_text(query)
-  call_forward()
 end alfred_script
