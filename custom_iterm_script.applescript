@@ -7,6 +7,9 @@ property open_in_new_window : false
 -- Set this property to false to reuse current tab
 property open_in_new_tab : true
 
+-- Set this property to true if iTerm is configured to launch without opening a new window
+property iterm_opens_quietly : true
+
 -- Handlers
 on new_window()
   tell application "iTerm" to create window with default profile
@@ -56,7 +59,7 @@ on alfred_script(query)
   else
     -- If iTerm is not running and we tell it to create a new window, we get two
     -- One from opening the application, and the other from the command
-    if is_running() then
+    if is_running() or iterm_opens_quietly then
       new_window()
     else
       call_forward()
