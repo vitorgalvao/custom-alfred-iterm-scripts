@@ -67,10 +67,14 @@ on alfred_script(query)
   end if
 
   -- Make sure a window exists before we continue, or the write may fail
-  repeat until has_windows()
-    delay 0.01
+  set loopCount to 0 as integer
+  repeat until (loopCount > 100) -- wait up to 10 seconds
+    if has_windows() then
+      send_text(query)
+      call_forward()
+      exit repeat
+    end if
+    delay 0.10
+    set loopCount to loopCount + 1
   end repeat
-
-  send_text(query)
-  call_forward()
 end alfred_script
