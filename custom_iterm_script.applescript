@@ -27,6 +27,10 @@ on is_running()
   application "iTerm" is running
 end is_running
 
+on is_processing()
+  tell application "iTerm" to tell the first window to tell current session to return is processing
+end is_processing
+
 on has_windows()
   if not is_running() then return false
 
@@ -66,9 +70,17 @@ on alfred_script(query)
     end if
   end if
 
+  -- macOS buffers TTY input to 1024 bytes, so if input is larger wait for session to be ready
+  -- "with timeout" does not work with "repeat", so use a delay (0.01 * 500 means a timeout of 5 seconds)
+  if length of query > 1024
+    repeat 500 times
+      if not is_processing() then exit repeat
+      delay 0.01
+    end repeat
+  end if
+
   -- Make sure a window exists before we continue, or the write may fail
-  -- "with timeout" does not work with a "repeat"
-  -- Delay of 0.01 seconds repeated 500 times means a timeout of 5 seconds
+  -- "with timeout" does not work with "repeat", so use a delay (0.01 * 500 means a timeout of 5 seconds)
   repeat 500 times
     if has_windows() then
       send_text(query)
