@@ -36,6 +36,7 @@ on has_windows()
 
   tell application "iTerm"
     if windows is {} then return false
+    if current window is missing value then return false
     if tabs of current window is {} then return false
     if sessions of current tab of current window is {} then return false
 
